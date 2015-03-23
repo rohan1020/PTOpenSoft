@@ -14,21 +14,20 @@
 
 CanvasDataGenerator::CanvasDataGenerator()
 {
-    coordinateSystem = new CoordinateSystem(range);
-    
-    listOfPoints = range.getAllPoints(mathFunc);
-    
-//    for (int i=0; i<listOfPoints.size(); i++) {
-//        cout << " \n " << listOfPoints[i] ;
-//        
-//    }
+}
+
+CanvasDataGenerator::CanvasDataGenerator(Range prange, MathFunction pmathFunc):range(prange), mathFunc(pmathFunc)
+{
 }
 
 CanvasStateData CanvasDataGenerator::getCanvasStateData()
 {
+    listOfPoints = range.getAllPoints(mathFunc);
     vector<Line> lines = getPlotLines();
     vector<QRect> rects;
     CanvasStateData csd = *new CanvasStateData(rects, lines);
+    csd.width = range.width ;
+    csd.height = range.height;
     
     return csd ;
 }
@@ -42,12 +41,15 @@ vector<Line> CanvasDataGenerator::getPlotLines()
         
         Point p1 = listOfPoints[i];
         Point p2 = listOfPoints[i+1];
-        QPoint q1 = coordinateSystem->findQPoint(p1);
-        QPoint q2 = coordinateSystem->findQPoint(p2);
+        QPoint q1 = range.findQPoint(p1);
+        QPoint q2 = range.findQPoint(p2);
         Line l = * new Line(q1,q2);
         lines.push_back(l);
         
     }
+    
+    lines.push_back(range.x_axis);
+    lines.push_back(range.y_axis);
     
     return lines;
     

@@ -18,7 +18,6 @@
 		7657FCBD1AC00BDB009A2F75 /* Point.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7657FCBA1AC00BDB009A2F75 /* Point.cpp */; };
 		7657FCC01AC00D63009A2F75 /* CanvasDataGenerator.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7657FCBE1AC00D63009A2F75 /* CanvasDataGenerator.cpp */; };
 		7657FCC31AC010AC009A2F75 /* Line.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7657FCC11AC010AC009A2F75 /* Line.cpp */; };
-		7657FCC61AC0170B009A2F75 /* CoordinateSystem.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7657FCC41AC0170B009A2F75 /* CoordinateSystem.cpp */; };
 		A8726DBAB1708155C13A0A2A /* moc_window.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 03CC4BA1004C618C58FF0257 /* moc_window.cpp */; settings = {ATTRIBUTES = (); }; };
 		EE433C6E873A077601F75D8F /* moc_widget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 6278B040C35C78324AB8F098 /* moc_widget.cpp */; settings = {ATTRIBUTES = (); }; };
 		F072E0280A6F926F8FDFF08B /* CanvasState.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 8FF8286F15F3B16FD447847F /* CanvasState.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -47,8 +46,6 @@
 		7657FCBF1AC00D63009A2F75 /* CanvasDataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasDataGenerator.h; sourceTree = SOURCE_ROOT; };
 		7657FCC11AC010AC009A2F75 /* Line.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Line.cpp; sourceTree = SOURCE_ROOT; };
 		7657FCC21AC010AC009A2F75 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = SOURCE_ROOT; };
-		7657FCC41AC0170B009A2F75 /* CoordinateSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoordinateSystem.cpp; sourceTree = SOURCE_ROOT; };
-		7657FCC51AC0170B009A2F75 /* CoordinateSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateSystem.h; sourceTree = SOURCE_ROOT; };
 		8FF8286F15F3B16FD447847F /* CanvasState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasState.cpp; sourceTree = SOURCE_ROOT; };
 		B14ABB0AA7604546A3BDA130 /* 2dpaint.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2dpaint.pro; sourceTree = SOURCE_ROOT; };
 		BC7723FF7F74713E4AFABBB7 /* CanvasStateData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasStateData.cpp; sourceTree = SOURCE_ROOT; };
@@ -73,8 +70,6 @@
 		05596AB53D8D521C69802C27 /* 2dpaint */ = {
 			isa = PBXGroup;
 			children = (
-				7657FCC41AC0170B009A2F75 /* CoordinateSystem.cpp */,
-				7657FCC51AC0170B009A2F75 /* CoordinateSystem.h */,
 				7657FCC11AC010AC009A2F75 /* Line.cpp */,
 				7657FCC21AC010AC009A2F75 /* Line.h */,
 				7657FCBE1AC00D63009A2F75 /* CanvasDataGenerator.cpp */,
@@ -238,7 +233,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7657FCC61AC0170B009A2F75 /* CoordinateSystem.cpp in Build Sources */,
 				F072E0280A6F926F8FDFF08B /* CanvasState.cpp in Build Sources */,
 				7657FCBC1AC00BDB009A2F75 /* MathFunction.cpp in Build Sources */,
 				7657FCC31AC010AC009A2F75 /* Line.cpp in Build Sources */,

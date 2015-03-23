@@ -22,8 +22,13 @@ Line::Line(QPoint p1,QPoint p2, QPen pPen):point1(p1), point2(p2)
     qLine = * new QLine(p1.x(), p1.y(),p2.x(), p2.y());
     
 }
+
 Line::Line(const Line &p2)
 {
     qPen = p2.qPen;
     qLine = p2.qLine;
+}
+
+Line::Line(){
+    
 }

@@ -16,6 +16,8 @@ class MathFunction {
     
 public:
     
+    int isSin = 1 ; //TMP
+    
     MathFunction();
     
     float getYVal(float x);

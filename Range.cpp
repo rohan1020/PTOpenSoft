@@ -7,14 +7,25 @@
 //
 
 #include "Range.h"
+#include <QtGui>
+
 
 Range::Range()
 {
-    x_min = -5 ;
-    x_max = 5 ;
+    x_min = -3.14 ;
+    x_max = 3.14*9 ;
     
     y_min = -10 ;
     y_max = 10 ;
+    
+    pixelsPerUnit_X = width / (x_max - x_min) ;
+    pixelsPerUnit_Y = height / (y_max - y_min);
+    
+    center = * new QPoint(-1*x_min*pixelsPerUnit_X, y_max*pixelsPerUnit_Y);
+    
+    x_axis = * new Line(*new QPoint(0,center.y()), *new QPoint(width,center.y()));
+    
+    y_axis = * new Line(*new QPoint(center.x(),0), *new QPoint(center.x(),height));
 }
 
 int Range::getNumPoints_Y()
@@ -49,4 +60,12 @@ vector<Point> Range::getAllPoints(MathFunction &mathFunc)
     }
     
     return points;
+}
+
+QPoint Range::findQPoint(Point p)
+{
+    int x , y ;
+    x = center.x() + p.x*pixelsPerUnit_X;
+    y = center.y() - p.y*pixelsPerUnit_Y;
+    return * new QPoint(x,y);
 }

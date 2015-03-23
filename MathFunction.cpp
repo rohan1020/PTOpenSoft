@@ -19,5 +19,8 @@ MathFunction::MathFunction()
 
 float MathFunction::getYVal(float x)
 {
-    return sin(x) ;
+    if(isSin == 1)
+        return sin(x) ;
+    else
+        return cos(x) ;
 }

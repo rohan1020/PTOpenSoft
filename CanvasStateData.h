@@ -18,6 +18,8 @@ public:
     CanvasStateData();
 
     CanvasStateData(const CanvasStateData &p2);
+    
+    CanvasStateData operator+(CanvasStateData csd);
 
     vector<QRect> rects ;
     vector<Line> lines ;

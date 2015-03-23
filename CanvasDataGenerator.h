@@ -16,7 +16,6 @@
 #include "Point.h"
 #include "CanvasStateData.h"
 #include "Line.h"
-#include "CoordinateSystem.h"
 
 using namespace std;
 
@@ -26,13 +25,15 @@ class CanvasDataGenerator
     Range range ;
     vector<Point> listOfPoints ;
     MathFunction mathFunc ;
-    CoordinateSystem *coordinateSystem ;
+    
     
 public:
     
     CanvasDataGenerator();
     
     CanvasStateData getCanvasStateData();
+    
+    CanvasDataGenerator(Range prange, MathFunction pmathFunc);
     
     vector<Line> getPlotLines();
     

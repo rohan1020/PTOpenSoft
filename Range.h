@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <vector>
 #include "Point.h"
+#include "Line.h"
 #include "MathFunction.h"
 
 using namespace std;
@@ -28,10 +29,18 @@ public:
     
     /* Scaling Params */
     
-    int pixelsPerPoint_X = 5; // Pixels
-    int pixelsPerPoint_Y = 10; // Pixels
+    int pixelsPerPoint_X = 5; // Pixels - Constant Parameter
+    int pixelsPerPoint_Y = 10; // Pixels - Constant Parameter
+    
     int height = 600 ; // Pixels
-    int width = 1200 ; // Pixels
+    int width = 900 ; // Pixels
+    
+    /* Coordinate System Params - AUTOCALCULATED */
+    QPoint center;
+    float pixelsPerUnit_X , pixelsPerUnit_Y ;  // 1 unit = x pixels
+    Line x_axis, y_axis ;
+    
+    /* Methods */
     
     Range();
     
@@ -42,6 +51,8 @@ public:
     float getStepSize();
     
     vector<Point> getAllPoints(MathFunction &mathFunc);
+    
+    QPoint findQPoint(Point p);
     
 };
 

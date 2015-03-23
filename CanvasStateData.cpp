@@ -25,3 +25,14 @@ CanvasStateData::CanvasStateData()
 {
 
 }
+
+CanvasStateData CanvasStateData::operator+(CanvasStateData csd)
+{
+    
+    CanvasStateData toReturn = csd;
+    toReturn.lines.insert(toReturn.lines.end(), lines.begin(), lines.end());
+    toReturn.rects.insert(toReturn.rects.end(), rects.begin(), rects.end());
+    
+    return toReturn;
+    
+}

@@ -23,7 +23,9 @@ public:
     Line(QPoint p1,QPoint p2, QPen pPen = *new QPen(Qt::black));
     
     Line(const Line &p2);
-
+    
+    Line();
+    
     QPen qPen ;
     QLine qLine ;
     QPoint point1, point2;

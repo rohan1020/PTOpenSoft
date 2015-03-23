@@ -13,14 +13,16 @@
 #include <QtGui>
 #include "Range.h"
 #include "Point.h"
+#include "Line.h"
 
 class CoordinateSystem {
     
     QPoint center;
-    Range range ;
-    float pixelsPerUnit_X = 100, pixelsPerUnit_Y = 100;  // 1 unit = x pixels
-public:
     
+    Range range ;
+    float pixelsPerUnit_X = 200, pixelsPerUnit_Y = 100;  // 1 unit = x pixels
+public:
+    Line x_axis, y_axis ;
     CoordinateSystem(QPoint pCenter, Range pRange);
     CoordinateSystem(Range pRange);
     
