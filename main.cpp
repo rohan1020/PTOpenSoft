@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     CanvasStateData canvasData = * new CanvasStateData(rects, lines);
     canvasData.width = 600;
-    canvasData.height = 200;
+    canvasData.height = 100;
 
 
     Window window(canvasData);
