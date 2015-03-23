@@ -30,7 +30,13 @@ void CanvasState::paintEvent(QPaintEvent *event)
     {
         painter.drawLine(canvasStateData.lines[i].qLine);
     }
-
+    
+    // Drawing Texts
+    for(int i=0; i<canvasStateData.texts.size(); i++)
+    {
+        painter.drawText(canvasStateData.texts[i].rect, canvasStateData.texts[i].txt.c_str());
+    }
+    
         
     // Painter Ending
     painter.end();

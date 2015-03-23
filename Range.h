@@ -14,6 +14,7 @@
 #include "Point.h"
 #include "Line.h"
 #include "MathFunction.h"
+#include "CanvasStateData.h"
 
 using namespace std;
 
@@ -57,6 +58,8 @@ public:
     QPoint findQPoint(Point p);
     
     void calculateCoordinateSystem();
+    
+    CanvasStateData getGridCanvasData();
     
     void moveCoordinate(float val, int type);
     

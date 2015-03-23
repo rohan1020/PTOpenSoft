@@ -19,6 +19,7 @@
 		7657FCC01AC00D63009A2F75 /* CanvasDataGenerator.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7657FCBE1AC00D63009A2F75 /* CanvasDataGenerator.cpp */; };
 		7657FCC31AC010AC009A2F75 /* Line.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7657FCC11AC010AC009A2F75 /* Line.cpp */; };
 		7657FCC91AC0514A009A2F75 /* MainCanvas.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7657FCC71AC0514A009A2F75 /* MainCanvas.cpp */; };
+		7657FCCC1AC0CDA3009A2F75 /* CanvasText.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7657FCCA1AC0CDA3009A2F75 /* CanvasText.cpp */; };
 		A8726DBAB1708155C13A0A2A /* moc_window.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 03CC4BA1004C618C58FF0257 /* moc_window.cpp */; settings = {ATTRIBUTES = (); }; };
 		EE433C6E873A077601F75D8F /* moc_widget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 6278B040C35C78324AB8F098 /* moc_widget.cpp */; settings = {ATTRIBUTES = (); }; };
 		F072E0280A6F926F8FDFF08B /* CanvasState.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 8FF8286F15F3B16FD447847F /* CanvasState.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -49,6 +50,8 @@
 		7657FCC21AC010AC009A2F75 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = SOURCE_ROOT; };
 		7657FCC71AC0514A009A2F75 /* MainCanvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainCanvas.cpp; sourceTree = SOURCE_ROOT; };
 		7657FCC81AC0514A009A2F75 /* MainCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCanvas.h; sourceTree = SOURCE_ROOT; };
+		7657FCCA1AC0CDA3009A2F75 /* CanvasText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasText.cpp; sourceTree = SOURCE_ROOT; };
+		7657FCCB1AC0CDA3009A2F75 /* CanvasText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasText.h; sourceTree = SOURCE_ROOT; };
 		8FF8286F15F3B16FD447847F /* CanvasState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasState.cpp; sourceTree = SOURCE_ROOT; };
 		B14ABB0AA7604546A3BDA130 /* 2dpaint.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2dpaint.pro; sourceTree = SOURCE_ROOT; };
 		BC7723FF7F74713E4AFABBB7 /* CanvasStateData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasStateData.cpp; sourceTree = SOURCE_ROOT; };
@@ -73,6 +76,8 @@
 		05596AB53D8D521C69802C27 /* 2dpaint */ = {
 			isa = PBXGroup;
 			children = (
+				7657FCCA1AC0CDA3009A2F75 /* CanvasText.cpp */,
+				7657FCCB1AC0CDA3009A2F75 /* CanvasText.h */,
 				7657FCC71AC0514A009A2F75 /* MainCanvas.cpp */,
 				7657FCC81AC0514A009A2F75 /* MainCanvas.h */,
 				7657FCC11AC010AC009A2F75 /* Line.cpp */,
@@ -239,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F072E0280A6F926F8FDFF08B /* CanvasState.cpp in Build Sources */,
+				7657FCCC1AC0CDA3009A2F75 /* CanvasText.cpp in Build Sources */,
 				7657FCBC1AC00BDB009A2F75 /* MathFunction.cpp in Build Sources */,
 				7657FCC31AC010AC009A2F75 /* Line.cpp in Build Sources */,
 				4E7F4BFDA0FA4525F80AC5E6 /* CanvasStateData.cpp in Build Sources */,

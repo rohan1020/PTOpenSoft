@@ -5,6 +5,7 @@
 #include <QtGui>
 #include <vector>
 #include "Line.h"
+#include "CanvasText.h"
 
 using namespace std ;
 
@@ -13,6 +14,8 @@ class CanvasStateData
     
 
 public:
+    CanvasStateData(vector<QRect> &prects, vector<Line> &plines, vector<CanvasText> &ptexts);
+    
     CanvasStateData(vector<QRect> &prects, vector<Line> &plines);
 
     CanvasStateData();
@@ -23,6 +26,8 @@ public:
 
     vector<QRect> rects ;
     vector<Line> lines ;
+    vector<CanvasText> texts;
+    
     int width, height ;
 
 

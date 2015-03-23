@@ -10,6 +10,7 @@
 #include "CanvasStateData.h"
 #include "Line.h"
 #include "CoordinateSystem.h"
+#include "CanvasText.h"
 #include <QtGui>
 
 CanvasDataGenerator::CanvasDataGenerator()
@@ -36,11 +37,7 @@ CanvasStateData CanvasDataGenerator::getCanvasStateData()
 {
     listOfPoints = range.getAllPoints(mathFunc);
     vector<Line> lines = getPlotLines();
-    vector<QRect> rects;
-    
-    lines.push_back(range.x_axis); // X-Axis
-    lines.push_back(range.y_axis); // Y-Axis
-    rects.push_back(* new QRect(0,0,range.width, range.height)); //Main Box
+    vector<QRect> rects;    
     
     CanvasStateData csd = *new CanvasStateData(rects, lines);
     csd.width = range.width ;

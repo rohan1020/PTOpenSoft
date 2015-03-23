@@ -34,6 +34,8 @@ CanvasStateData MainCanvas::calculateCanvasData()
         totalData = totalData + csd ;
     }
     
+    totalData = totalData + range.getGridCanvasData();
+    
     return totalData;
 }
 

@@ -148,3 +148,25 @@ void Range::zoom(float val, int type)
     
     calculateCoordinateSystem();
 }
+
+CanvasStateData Range::getGridCanvasData()
+{
+    vector<Line> lines;
+    vector<QRect> rects;
+    vector<CanvasText> txts;
+    
+    lines.push_back(x_axis); // X-Axis
+    lines.push_back(y_axis); // Y-Axis
+    rects.push_back(* new QRect(0,0,width, height)); //Main Box
+    
+    
+    CanvasStateData csd = *new CanvasStateData(rects, lines,txts);
+    csd.width = width ;
+    csd.height = height;
+    
+    return csd ;
+}
+
+
+
+
