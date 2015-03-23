@@ -44,6 +44,8 @@ public:
     
     Range();
     
+    void setParams(float px_min,float px_max,float py_min,float py_max, int pwidth, int pheight );
+    
     int getNumPoints_Y();
     
     int getNumPoints_X();
@@ -53,6 +55,8 @@ public:
     vector<Point> getAllPoints(MathFunction &mathFunc);
     
     QPoint findQPoint(Point p);
+    
+    void calculateCoordinateSystem();
     
 };
 

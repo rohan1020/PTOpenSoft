@@ -21,6 +21,7 @@ private:
     float pcx;
     int width, height;
     CanvasStateData canvasStateData ;
+    
 };
 
 

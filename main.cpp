@@ -19,13 +19,11 @@ int main(int argc, char *argv[])
     CanvasDataGenerator cd(r,f) ;
     CanvasStateData csd = cd.getCanvasStateData();
     
-    csd.rects.push_back(* new QRect(0,0,csd.width, csd.height)); //Main Box
-    
     CanvasDataGenerator cd2(r,f2) ;
     CanvasStateData csd2 = cd2.getCanvasStateData();
     
     Window window(csd+csd2);
-
     window.show();
+    
     return app.exec();
 }

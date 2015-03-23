@@ -12,10 +12,12 @@ class Window : public QWidget
 public:
     Window(CanvasStateData cdata);
 
-
+    void redrawCanvasData(CanvasStateData cdata);
+    
 private:
     CanvasState *gobject;
     CanvasStateData canvasData ;
+   
 };
 
 #endif

@@ -20,11 +20,22 @@ CanvasDataGenerator::CanvasDataGenerator(Range prange, MathFunction pmathFunc):r
 {
 }
 
+CanvasStateData CanvasDataGenerator::changeRange(Range prange)
+{
+    range = prange;
+    return getCanvasStateData();
+}
+
 CanvasStateData CanvasDataGenerator::getCanvasStateData()
 {
     listOfPoints = range.getAllPoints(mathFunc);
     vector<Line> lines = getPlotLines();
     vector<QRect> rects;
+    
+    lines.push_back(range.x_axis); // X-Axis
+    lines.push_back(range.y_axis); // Y-Axis
+    rects.push_back(* new QRect(0,0,range.width, range.height)); //Main Box
+    
     CanvasStateData csd = *new CanvasStateData(rects, lines);
     csd.width = range.width ;
     csd.height = range.height;
@@ -47,9 +58,6 @@ vector<Line> CanvasDataGenerator::getPlotLines()
         lines.push_back(l);
         
     }
-    
-    lines.push_back(range.x_axis);
-    lines.push_back(range.y_axis);
     
     return lines;
     

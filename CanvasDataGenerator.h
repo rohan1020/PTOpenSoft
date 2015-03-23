@@ -35,6 +35,8 @@ public:
     
     CanvasDataGenerator(Range prange, MathFunction pmathFunc);
     
+    CanvasStateData changeRange(Range prange);
+    
     vector<Line> getPlotLines();
     
     

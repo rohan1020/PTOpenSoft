@@ -12,12 +12,31 @@
 
 Range::Range()
 {
-    x_min = -3.14 ;
+    x_min = -3.14*2 ;
     x_max = 3.14*9 ;
     
     y_min = -10 ;
     y_max = 10 ;
     
+    calculateCoordinateSystem();
+    
+}
+
+void Range::setParams(float px_min,float px_max,float py_min,float py_max, int pwidth, int pheight )
+{
+    x_min = px_min;
+    x_max = px_max;
+    y_min = py_min;
+    y_max = py_max;
+    width = pwidth;
+    height = pheight;
+    
+    calculateCoordinateSystem();
+
+}
+
+void Range::calculateCoordinateSystem()
+{
     pixelsPerUnit_X = width / (x_max - x_min) ;
     pixelsPerUnit_Y = height / (y_max - y_min);
     

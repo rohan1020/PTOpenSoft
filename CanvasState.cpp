@@ -12,7 +12,7 @@ CanvasState::CanvasState(QWidget *parent, CanvasStateData &value)
 void CanvasState::paintEvent(QPaintEvent *event)
 {
     // Painter Initialization
-    Q_UNUSED(event); 
+    Q_UNUSED(event);
     QPainter painter;
     painter.begin(this);
     painter.setRenderHint(QPainter::Antialiasing);
@@ -40,5 +40,9 @@ void CanvasState::paintEvent(QPaintEvent *event)
 void CanvasState::setPrintData(CanvasStateData value){
    
    canvasStateData = value ;
-
+    
+    repaint();
 }
+
+
+

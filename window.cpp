@@ -17,3 +17,9 @@ Window::Window(CanvasStateData cdata) : QWidget(), canvasData(cdata)
 
     setWindowTitle(tr("2d-Plotter"));
 }
+
+void Window::redrawCanvasData(CanvasStateData cdata)
+{
+    canvasData = cdata;
+    gobject->setPrintData(canvasData);
+}
