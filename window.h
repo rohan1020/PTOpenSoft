@@ -10,7 +10,7 @@ class Window : public QWidget
     Q_OBJECT
 
 public:
-    Window(CanvasStateData cdata);
+    Window();
 
     void redrawCanvasData(CanvasStateData cdata);
     

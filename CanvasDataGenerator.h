@@ -31,6 +31,8 @@ public:
     
     CanvasDataGenerator();
     
+    CanvasDataGenerator(const CanvasDataGenerator const &c2);
+    
     CanvasStateData getCanvasStateData();
     
     CanvasDataGenerator(Range prange, MathFunction pmathFunc);

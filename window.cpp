@@ -3,10 +3,16 @@
 #include "CanvasState.h"
 #include "window.h"
 #include "CanvasStateData.h"
+#include "MainCanvas.h"
 
-Window::Window(CanvasStateData cdata) : QWidget(), canvasData(cdata)
+
+Window::Window() : QWidget()
 {
-
+    
+    MainCanvas mainCanvas ;
+    
+    canvasData = mainCanvas.calculateCanvasData();
+    
     gobject = new CanvasState(this, canvasData);
 
     //gobject->setPrintData(canvasData);

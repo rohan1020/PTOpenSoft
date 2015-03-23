@@ -20,6 +20,12 @@ CanvasDataGenerator::CanvasDataGenerator(Range prange, MathFunction pmathFunc):r
 {
 }
 
+CanvasDataGenerator::CanvasDataGenerator(const CanvasDataGenerator const &c2)
+{
+    mathFunc = c2.mathFunc;
+    range = c2.range;
+}
+
 CanvasStateData CanvasDataGenerator::changeRange(Range prange)
 {
     range = prange;
