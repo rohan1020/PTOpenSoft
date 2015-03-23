@@ -5,11 +5,14 @@
 #include "CanvasState.h"
 #include "CanvasStateData.h"
 
+#include "CanvasDataGenerator.h"
+
 int main(int argc, char *argv[])
 {
+    CanvasDataGenerator cd ;
+    
     QApplication app(argc, argv);
     
-
     vector<QRect> rects ;
     rects.push_back(* new QRect(1,1,50,50));
     rects.push_back(* new QRect(80,80,50,50));
