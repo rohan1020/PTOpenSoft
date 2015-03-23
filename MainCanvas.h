@@ -28,6 +28,12 @@ class MainCanvas {
     
     vector<CanvasDataGenerator> plots ;
     
+    float x_tick = 2;
+    float y_tick = 2;
+    float zoom_tick_x = 2;
+    float zoom_tick_y = 2;
+    // remove x_min, etc from public.. implement a getter or setter, since other routine procedures need to be implemented while changing the values
+    
     
 public:
     
@@ -38,8 +44,9 @@ public:
     
     CanvasStateData calculateCanvasData();
     
-    void MoveRight();
-    void MoveLeft();
+    void moveCoordinate(int type);
+    
+    void zoom(int type);
     
     
         

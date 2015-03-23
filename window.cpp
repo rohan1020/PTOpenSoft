@@ -30,6 +30,12 @@ Window::Window() : QWidget()
     zout = new QPushButton("-", this);
     connect(zout, SIGNAL(clicked()), this, SLOT(ZoutSlot()));
     
+    zin_y = new QPushButton("+", this);
+    connect(zin_y, SIGNAL(clicked()), this, SLOT(ZinSlot_y()));
+    zout_y = new QPushButton("-", this);
+    connect(zout_y, SIGNAL(clicked()), this, SLOT(ZoutSlot_y()));
+
+    
     QGridLayout *layout = new QGridLayout;
     layout->addWidget(up, 0, 1);
     layout->addWidget(left, 1, 0);
@@ -38,6 +44,10 @@ Window::Window() : QWidget()
     layout->addWidget(zin, 2, 0);
     layout->addWidget(down, 2, 1);
     layout->addWidget(zout, 2, 2);
+    
+    layout->addWidget(zin_y, 0, 0);
+    layout->addWidget(zout_y, 0, 2);
+    
     setLayout(layout);
     
     setWindowTitle(tr("2d-Plotter"));
@@ -52,26 +62,35 @@ void Window::redrawCanvasData(CanvasStateData cdata)
 
 void Window::UpSlot()
 {
-    
+    mainCanvas.moveCoordinate(2);
 }
 
 void Window::DownSlot()
 {
-    
+   mainCanvas.moveCoordinate(3);
 }
 void Window::LeftSlot()
 {
-    mainCanvas.MoveLeft();
+    mainCanvas.moveCoordinate(0);
 }
 void Window::RightSlot()
 {
-    mainCanvas.MoveRight();
+    mainCanvas.moveCoordinate(1);
 }
 void Window::ZinSlot()
 {
-    
+    mainCanvas.zoom(0);
 }
 void Window::ZoutSlot()
 {
-    
+    mainCanvas.zoom(1);
+}
+
+void Window::ZinSlot_y()
+{
+    mainCanvas.zoom(2);
+}
+void Window::ZoutSlot_y()
+{
+    mainCanvas.zoom(3);
 }

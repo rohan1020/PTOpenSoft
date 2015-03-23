@@ -58,6 +58,10 @@ public:
     
     void calculateCoordinateSystem();
     
+    void moveCoordinate(float val, int type);
+    
+    void zoom(float val, int type);
+    
 };
 
 

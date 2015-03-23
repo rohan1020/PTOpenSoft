@@ -37,28 +37,59 @@ CanvasStateData MainCanvas::calculateCanvasData()
     return totalData;
 }
 
-void MainCanvas::MoveRight()
+void MainCanvas::moveCoordinate(int type)
 {
-    range.x_max = range.x_max - 2;
-    range.x_min = range.x_min - 2;
-    range.calculateCoordinateSystem();
-    
-    //range.y_min = range.y_min + 2;
+    switch (type) {
+        case 0:
+            range.moveCoordinate(x_tick, 0);
+            break;
+            
+        case 1:
+            range.moveCoordinate(x_tick, 1);
+            break;
+            
+        case 2:
+            range.moveCoordinate(y_tick, 2);
+            break;
+            
+        case 3:
+            range.moveCoordinate(y_tick, 3);
+            break;
+            
+        default:
+            break;
+            
+    }
     
     calculateCanvasData();
     canvas->setPrintData(totalData);
-    
 }
 
-void MainCanvas::MoveLeft()
+void MainCanvas::zoom(int type)
 {
-    range.x_max = range.x_max + 2;
-    range.x_min = range.x_min + 2;
-    range.calculateCoordinateSystem();
-    
-    //range.y_min = range.y_min + 2;
+    switch (type) {
+            
+        case 0:
+            range.zoom(zoom_tick_x, 0);
+            break;
+            
+        case 1:
+            range.zoom(zoom_tick_x, 1);
+            break;
+            
+        case 2:
+            range.zoom(zoom_tick_y, 2);
+            break;
+            
+        case 3:
+            range.zoom(zoom_tick_y, 3);
+            break;
+            
+        default:
+            break;
+            
+    }
     
     calculateCanvasData();
     canvas->setPrintData(totalData);
-    
 }

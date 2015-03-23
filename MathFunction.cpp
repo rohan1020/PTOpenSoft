@@ -22,5 +22,5 @@ float MathFunction::getYVal(float x)
     if(isSin == 1)
         return sin(x) ;
     else
-        return cos(x) ;
+        return cos(x);
 }

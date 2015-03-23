@@ -88,3 +88,63 @@ QPoint Range::findQPoint(Point p)
     y = center.y() - p.y*pixelsPerUnit_Y;
     return * new QPoint(x,y);
 }
+
+void Range::moveCoordinate(float val, int type)
+{
+    switch (type) {
+        case 0:
+            x_min = x_min + val;
+            x_max = x_max + val;
+            break;
+            
+        case 1:
+            x_min = x_min - val;
+            x_max = x_max - val;
+            break;
+            
+        case 2:
+            y_min = y_min - val;
+            y_max = y_max - val;
+            break;
+            
+        case 3:
+            y_min = y_min + val;
+            y_max = y_max + val;
+            break;
+            
+        default:
+            break;
+    }
+    
+    calculateCoordinateSystem();
+}
+
+void Range::zoom(float val, int type)
+{
+    switch (type) {
+        case 0:
+            x_min = x_min + val;
+            x_max = x_max - val;
+            break;
+            
+        case 1:
+            x_min = x_min - val;
+            x_max = x_max + val;
+            break;
+            
+        case 2:
+            y_min = y_min + val;
+            y_max = y_max - val;
+            break;
+            
+        case 3:
+            y_min = y_min - val;
+            y_max = y_max + val;
+            break;
+            
+        default:
+            break;
+    }
+    
+    calculateCoordinateSystem();
+}

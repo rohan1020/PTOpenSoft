@@ -27,6 +27,9 @@ private:
     QPushButton *right;
     QPushButton *zin;
     QPushButton *zout;
+    QPushButton *zin_y;
+    QPushButton *zout_y;
+    
     private slots:
     void UpSlot();
     void DownSlot();
@@ -34,6 +37,8 @@ private:
     void RightSlot();
     void ZinSlot();
     void ZoutSlot();
+    void ZinSlot_y();
+    void ZoutSlot_y();
    
 };
 
