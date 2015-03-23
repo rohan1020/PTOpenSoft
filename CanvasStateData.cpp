@@ -2,10 +2,11 @@
 #include "CanvasStateData.h"
 #include <QWidget>
 #include <vector>
+#include "Line.h"
 
 using namespace std ;
 
-CanvasStateData::CanvasStateData(vector<QRect> &prects, vector<QLine> &plines)
+CanvasStateData::CanvasStateData(vector<QRect> &prects, vector<Line> &plines)
 {    
     rects = prects ;
     lines = plines ;

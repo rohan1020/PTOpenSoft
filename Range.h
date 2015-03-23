@@ -18,6 +18,9 @@ using namespace std;
 
 class Range
 {
+    
+    
+public:
     /* X-Y Range Params */
     
     float x_min, x_max ;
@@ -27,10 +30,8 @@ class Range
     
     int pixelsPerPoint_X = 5; // Pixels
     int pixelsPerPoint_Y = 10; // Pixels
-    int height = 500 ; // Pixels
-    int width = 800 ; // Pixels
-    
-public:
+    int height = 600 ; // Pixels
+    int width = 1200 ; // Pixels
     
     Range();
     

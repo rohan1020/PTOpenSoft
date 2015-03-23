@@ -28,7 +28,7 @@ void CanvasState::paintEvent(QPaintEvent *event)
     // Drawing Lines
     for(int i=0; i<canvasStateData.lines.size(); i++)
     {
-        painter.drawLine(canvasStateData.lines[i]);
+        painter.drawLine(canvasStateData.lines[i].qLine);
     }
 
         

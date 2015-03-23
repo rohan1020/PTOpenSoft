@@ -10,8 +10,8 @@
 
 Range::Range()
 {
-    x_min = -10 ;
-    x_max = 10 ;
+    x_min = -5 ;
+    x_max = 5 ;
     
     y_min = -10 ;
     y_max = 10 ;

@@ -8,6 +8,7 @@
 
 #include "MathFunction.h"
 #include <iostream>
+#include<cmath>
 
 using namespace std;
 
@@ -18,5 +19,5 @@ MathFunction::MathFunction()
 
 float MathFunction::getYVal(float x)
 {
-    return x + 1 ;
+    return sin(x) ;
 }
