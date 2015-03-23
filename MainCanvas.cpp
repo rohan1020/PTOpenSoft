@@ -14,7 +14,7 @@ MainCanvas::MainCanvas()
     f2.isSin = 0;
     
     functions.push_back(f);
-    //functions.push_back(f2);
+    functions.push_back(f2);
     
 }
 
@@ -24,6 +24,7 @@ MainCanvas::MainCanvas(vector<MathFunction> pfuncs, Range prange):functions(pfun
 
 CanvasStateData MainCanvas::calculateCanvasData()
 {
+    totalData = * new CanvasStateData;
     
     for(int i=0; i<functions.size();i++)
     {
@@ -34,4 +35,30 @@ CanvasStateData MainCanvas::calculateCanvasData()
     }
     
     return totalData;
+}
+
+void MainCanvas::MoveRight()
+{
+    range.x_max = range.x_max - 2;
+    range.x_min = range.x_min - 2;
+    range.calculateCoordinateSystem();
+    
+    //range.y_min = range.y_min + 2;
+    
+    calculateCanvasData();
+    canvas->setPrintData(totalData);
+    
+}
+
+void MainCanvas::MoveLeft()
+{
+    range.x_max = range.x_max + 2;
+    range.x_min = range.x_min + 2;
+    range.calculateCoordinateSystem();
+    
+    //range.y_min = range.y_min + 2;
+    
+    calculateCanvasData();
+    canvas->setPrintData(totalData);
+    
 }

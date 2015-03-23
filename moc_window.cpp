@@ -22,25 +22,44 @@ static const uint qt_meta_data_Window[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+ // slots: signature, parameters, type, tag, flags
+       7,   16,   16,   16, 0x08,
+      17,   16,   16,   16, 0x08,
+      28,   16,   16,   16, 0x08,
+      39,   16,   16,   16, 0x08,
+      51,   16,   16,   16, 0x08,
+      61,   16,   16,   16, 0x08,
+
        0        // eod
 };
 
 static const char qt_meta_stringdata_Window[] = {
-    "Window\0"
+    "Window\0UpSlot()\0\0DownSlot()\0LeftSlot()\0"
+    "RightSlot()\0ZinSlot()\0ZoutSlot()\0"
 };
 
 void Window::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        Window *_t = static_cast<Window *>(_o);
+        switch (_id) {
+        case 0: _t->UpSlot(); break;
+        case 1: _t->DownSlot(); break;
+        case 2: _t->LeftSlot(); break;
+        case 3: _t->RightSlot(); break;
+        case 4: _t->ZinSlot(); break;
+        case 5: _t->ZoutSlot(); break;
+        default: ;
+        }
+    }
     Q_UNUSED(_a);
 }
 
@@ -75,6 +94,11 @@ int Window::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 6)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 6;
+    }
     return _id;
 }
 QT_END_MOC_NAMESPACE

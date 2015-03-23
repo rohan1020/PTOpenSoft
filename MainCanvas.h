@@ -27,15 +27,19 @@ class MainCanvas {
     
     
     vector<CanvasDataGenerator> plots ;
-    CanvasState *canvas;
+    
     
 public:
     
+    CanvasState *canvas;
     MainCanvas();
     
     MainCanvas(vector<MathFunction> pfuncs, Range prange);
     
     CanvasStateData calculateCanvasData();
+    
+    void MoveRight();
+    void MoveLeft();
     
     
         
