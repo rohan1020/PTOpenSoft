@@ -4,7 +4,7 @@
 #include "window.h"
 #include "CanvasStateData.h"
 #include "MainCanvas.h"
-
+#include "FunctionInputWindow.h"
 
 Window::Window() : QWidget()
 {

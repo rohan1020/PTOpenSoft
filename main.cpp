@@ -7,6 +7,8 @@
 
 #include "CanvasDataGenerator.h"
 
+#include "FunctionInputWindow.h"
+
 int main(int argc, char *argv[])
 {
     
@@ -14,6 +16,10 @@ int main(int argc, char *argv[])
     
     Window window;
     window.show();
+    
+    FunctionInputWindow ff;
+    ff.show();
+    
     
     return app.exec();
 }
