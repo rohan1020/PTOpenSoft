@@ -76,6 +76,10 @@ void Window::addFunction(string funcTxt)
 void Window::UpSlot()
 {
     mainCanvas.moveCoordinate(3);
+    FunctionInputWindow *fiw = new FunctionInputWindow;
+    fiw->setWindowTitle("Input Function");
+    fiw->show();
+    fiw->window = this;
 }
 
 void Window::DownSlot()

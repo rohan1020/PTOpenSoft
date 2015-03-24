@@ -98,7 +98,7 @@ void MainCanvas::zoom(int type)
 
 void MainCanvas::addFunction(string funcTxt)
 {
-    MathFunction mathFunction(funcTxt);
+    MathFunction mathFunction(funcTxt, *new QPen(Qt::red));
     
     functions.push_back(mathFunction);
     

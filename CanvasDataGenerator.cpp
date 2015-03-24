@@ -57,7 +57,7 @@ vector<Line> CanvasDataGenerator::getPlotLines()
         Point p2 = listOfPoints[i+1];
         QPoint q1 = range.findQPoint(p1);
         QPoint q2 = range.findQPoint(p2);
-        Line l = * new Line(q1,q2);
+        Line l = * new Line(q1,q2,mathFunc.qpen);
         lines.push_back(l);
         
     }

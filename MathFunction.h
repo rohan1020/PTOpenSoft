@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string>
+#include <QtGui>
 
 using namespace std;
 
@@ -21,9 +22,10 @@ class MathFunction {
 public:
     
     int isSin = 1 ; //TMP
+    QPen qpen;
     
     MathFunction();
-    MathFunction(string pfuncTxt);
+    MathFunction(string pfuncTxt, QPen pPen = *new QPen(Qt::black));
     
     float getYVal(float x);
     

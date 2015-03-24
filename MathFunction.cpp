@@ -7,6 +7,7 @@
 //
 
 #include "MathFunction.h"
+#include <QtGui>
 #include <iostream>
 #include<cmath>
 
@@ -18,7 +19,7 @@ MathFunction::MathFunction()
 }
 
 
-MathFunction::MathFunction(string pfuncTxt): funcTxt(pfuncTxt)
+MathFunction::MathFunction(string pfuncTxt, QPen pPen): funcTxt(pfuncTxt), qpen(pPen)
 {
     
 }
