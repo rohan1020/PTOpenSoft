@@ -15,8 +15,8 @@ Range::Range()
     x_min = -3.14*2 ;
     x_max = 3.14*2 ;
     
-    y_min = -10 ;
-    y_max = 10 ;
+    y_min = -5 ;
+    y_max = 5 ;
     
     calculateCoordinateSystem();
     
@@ -121,6 +121,9 @@ void Range::moveCoordinate(float val, int type)
 
 void Range::zoom(float val, int type)
 {
+    
+    // ToDo : Add check case if x_max < x_min, then do something
+    
     switch (type) {
         case 0:
             x_min = x_min + val;
@@ -161,9 +164,7 @@ CanvasStateData Range::getGridCanvasData()
     
     int RECT_WIDTH = 40, RECT_HEIGHT = 40, LINE_WIDTH = 10;
     
-    vector<float> xticks ;
-    xticks.push_back(1);
-    xticks.push_back(2.5);
+    vector<float> xticks = getXTicksList();
     
     for(int i=0; i<xticks.size(); i++)
     {
@@ -191,9 +192,7 @@ CanvasStateData Range::getGridCanvasData()
     
     }
     
-    vector<float> yticks ;
-    yticks.push_back(1);
-    yticks.push_back(2);
+    vector<float> yticks = getYTicksList();
     
     for(int i=0; i<yticks.size(); i++)
     {
@@ -231,5 +230,44 @@ CanvasStateData Range::getGridCanvasData()
 }
 
 
+vector<float> Range::getXTicksList()
+{
+    vector<float> ans ;
+    
+    int curX = x_min, curY, stepSize = 1;
+    
+    while (curX <= x_max) {
+        if(curX==0.0)
+        {
+            curX = curX + stepSize;
+            continue;
+        }
+        ans.push_back(curX);
+        curX = curX + stepSize ;
+    }
+    
+    return ans ;
+}
 
+vector<float> Range::getYTicksList()
+{
+    vector<float> ans ;
+    
+    int curX = y_min, curY, stepSize = 1;
+    
+    while (curX <= y_max) {
+        
+        if(curX==0.0)
+        {
+            curX = curX + stepSize;
+            continue;
+        }
+        
+        ans.push_back(curX);
+        curX = curX + stepSize ;
+    }
+    
+    return ans ;
+    
+}
 

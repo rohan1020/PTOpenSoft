@@ -60,6 +60,10 @@ public:
     
     void calculateCoordinateSystem();
     
+    
+    vector<float> getXTicksList();
+    vector<float> getYTicksList();
+    
     CanvasStateData getGridCanvasData();
     
     void moveCoordinate(float val, int type);
