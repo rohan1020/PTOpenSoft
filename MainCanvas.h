@@ -35,6 +35,7 @@ class MainCanvas {
     float y_tick = 2;
     float zoom_tick_x = 2;
     float zoom_tick_y = 2;
+   
     // remove x_min, etc from public.. implement a getter or setter, since other routine procedures need to be implemented while changing the values
     
     
@@ -54,6 +55,7 @@ public:
     QColor addFunction(string funcTxt);
     
     void removeFunction(int idx);
+    
         
 };
 

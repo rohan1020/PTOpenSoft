@@ -10,9 +10,6 @@
 
 MainCanvas::MainCanvas()
 {
-    MathFunction f, f2;
-    f2.isSin = 0;
-    
     qcolorsRandom.push_back(Qt::red);
     qcolorsRandom.push_back(Qt::blue);
     qcolorsRandom.push_back(Qt::green);
