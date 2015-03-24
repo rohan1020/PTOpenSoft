@@ -59,6 +59,7 @@ Window::Window() : QWidget()
     setLayout(layout);
     
     setWindowTitle(tr("2d-Plotter"));
+    
 }
 
 void Window::redrawCanvasData(CanvasStateData cdata)

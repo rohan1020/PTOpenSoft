@@ -12,17 +12,19 @@
 #include <stdio.h>
 #include <string>
 #include <QtGui>
+#include"expparser/parser.h"
 
 using namespace std;
 
 class MathFunction {
     
-    string funcTxt;
+    
     
 public:
     
     int isSin = 1 ; //TMP
     QPen qpen;
+    string funcTxt;
     
     MathFunction();
     MathFunction(string pfuncTxt, QPen pPen = *new QPen(Qt::black));

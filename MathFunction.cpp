@@ -10,6 +10,7 @@
 #include <QtGui>
 #include <iostream>
 #include<cmath>
+#include"expparser/parser.h"
 
 using namespace std;
 
@@ -21,14 +22,25 @@ MathFunction::MathFunction()
 
 MathFunction::MathFunction(string pfuncTxt, QPen pPen): funcTxt(pfuncTxt), qpen(pPen)
 {
-    
+    Parser pars;
+    string result = pars.parse("x=2");
+    cout << result ;
 }
 
 
 float MathFunction::getYVal(float x)
 {
-    if(isSin == 1)
-        return cos(x) ;
-    else
-        return x*x*x;
+    Parser prs;
+    
+    string temp = "x=" + to_string(x); //
+    prs.parse(temp.c_str());
+    
+    prs.parse(funcTxt.c_str());
+    
+    return prs.ans;
+    
+//    if(isSin == 1)
+//        return cos(x) ;
+//    else
+//        return x*x*x;
 }
