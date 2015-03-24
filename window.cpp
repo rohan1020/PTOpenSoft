@@ -62,20 +62,20 @@ void Window::redrawCanvasData(CanvasStateData cdata)
 
 void Window::UpSlot()
 {
-    mainCanvas.moveCoordinate(2);
+    mainCanvas.moveCoordinate(3);
 }
 
 void Window::DownSlot()
 {
-   mainCanvas.moveCoordinate(3);
+   mainCanvas.moveCoordinate(2);
 }
 void Window::LeftSlot()
 {
-    mainCanvas.moveCoordinate(0);
+    mainCanvas.moveCoordinate(1);
 }
 void Window::RightSlot()
 {
-    mainCanvas.moveCoordinate(1);
+    mainCanvas.moveCoordinate(0);
 }
 void Window::ZinSlot()
 {

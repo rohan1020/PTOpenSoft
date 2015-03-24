@@ -20,7 +20,7 @@ MathFunction::MathFunction()
 float MathFunction::getYVal(float x)
 {
     if(isSin == 1)
-        return sin(x) ;
+        return cos(x) ;
     else
         return x*x - 1;
 }

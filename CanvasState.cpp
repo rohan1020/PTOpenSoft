@@ -28,8 +28,11 @@ void CanvasState::paintEvent(QPaintEvent *event)
     // Drawing Lines
     for(int i=0; i<canvasStateData.lines.size(); i++)
     {
+        painter.setPen(canvasStateData.lines[i].qPen);
         painter.drawLine(canvasStateData.lines[i].qLine);
     }
+    
+    painter.setPen(Qt::black);
     
     // Drawing Texts
     for(int i=0; i<canvasStateData.texts.size(); i++)
