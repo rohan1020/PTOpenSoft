@@ -41,7 +41,7 @@ private:
     QPushButton *delButton;
     QPushButton *screenButton;
     QVector<QString> myList;
-    
+    QVector<QColor> myList_cols;
     QGridLayout *funcList;
     
     private slots:

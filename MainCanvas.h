@@ -24,7 +24,8 @@ class MainCanvas {
     
     Range range;
     vector<MathFunction> functions;
-    vector<QPen> colorsRandom;
+    //vector<QPen> colorsRandom;
+    vector<QColor> qcolorsRandom;
     CanvasStateData totalData ;
     
     
@@ -50,7 +51,7 @@ public:
     
     void zoom(int type);
     
-    void addFunction(string funcTxt);
+    QColor addFunction(string funcTxt);
     
     void removeFunction(int idx);
         

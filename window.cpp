@@ -99,9 +99,12 @@ void Window::redrawCanvasData(CanvasStateData cdata)
 
 void Window::addFunction(string funcTxt)
 {
-    mainCanvas.addFunction(funcTxt);
+    QColor newCol = mainCanvas.addFunction(funcTxt);
     myList.push_back(*new QString(("y = " + funcTxt).c_str()));
+    myList_cols.push_back(newCol);
     funcView->addItem(*new QString(("y = " + funcTxt).c_str()));
+    
+    funcView->item(funcView->count() - 1)->setForeground(*(new QBrush(newCol)));
 }
 
 void Window::addNewFunc(QString s)
@@ -167,10 +170,13 @@ void Window::DeleteSlot()
     mainCanvas.removeFunction(in);
     
     myList.erase(myList.begin() + in);
+    myList_cols.erase(myList_cols.begin() + in);
     
     funcView->clear();
     for(int i = 0; i< myList.size(); ++i){
         funcView->addItem(myList[i]);
+        funcView->item(funcView->count() - 1)->setForeground(*(new QBrush(myList_cols[i])));
+        
     }
 }
 

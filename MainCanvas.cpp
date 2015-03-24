@@ -13,12 +13,13 @@ MainCanvas::MainCanvas()
     MathFunction f, f2;
     f2.isSin = 0;
     
-    colorsRandom.push_back(*new QPen(Qt::red));
-    colorsRandom.push_back(*new QPen(Qt::blue));
-    colorsRandom.push_back(*new QPen(Qt::green));
-    colorsRandom.push_back(*new QPen(Qt::yellow));
-    colorsRandom.push_back(*new QPen(Qt::gray));
-    colorsRandom.push_back(*new QPen(Qt::black));
+    qcolorsRandom.push_back(Qt::red);
+    qcolorsRandom.push_back(Qt::blue);
+    qcolorsRandom.push_back(Qt::green);
+    qcolorsRandom.push_back(Qt::yellow);
+    qcolorsRandom.push_back(Qt::gray);
+    qcolorsRandom.push_back(Qt::black);
+//
     //functions.push_back(f);
     //functions.push_back(f2);
     
@@ -102,14 +103,18 @@ void MainCanvas::zoom(int type)
     canvas->setPrintData(totalData);
 }
 
-void MainCanvas::addFunction(string funcTxt)
+QColor MainCanvas::addFunction(string funcTxt)
 {
-    MathFunction mathFunction(funcTxt, colorsRandom[functions.size()%colorsRandom.size()]);
+    QColor newCol = qcolorsRandom[functions.size()%qcolorsRandom.size()];
+    
+    MathFunction mathFunction(funcTxt, *new QPen(newCol));
     
     functions.push_back(mathFunction);
     
     calculateCanvasData();
     canvas->setPrintData(totalData);
+    
+    return newCol;
     
 }
 
