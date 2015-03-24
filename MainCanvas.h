@@ -16,6 +16,7 @@
 #include "CanvasState.h"
 #include "CanvasStateData.h"
 #include <vector>
+#include <QtGui>
 
 using namespace std ;
 
@@ -23,6 +24,7 @@ class MainCanvas {
     
     Range range;
     vector<MathFunction> functions;
+    vector<QPen> colorsRandom;
     CanvasStateData totalData ;
     
     

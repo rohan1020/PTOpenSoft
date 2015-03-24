@@ -13,6 +13,12 @@ MainCanvas::MainCanvas()
     MathFunction f, f2;
     f2.isSin = 0;
     
+    colorsRandom.push_back(*new QPen(Qt::red));
+    colorsRandom.push_back(*new QPen(Qt::blue));
+    colorsRandom.push_back(*new QPen(Qt::green));
+    colorsRandom.push_back(*new QPen(Qt::yellow));
+    colorsRandom.push_back(*new QPen(Qt::gray));
+    colorsRandom.push_back(*new QPen(Qt::black));
     //functions.push_back(f);
     //functions.push_back(f2);
     
@@ -98,7 +104,7 @@ void MainCanvas::zoom(int type)
 
 void MainCanvas::addFunction(string funcTxt)
 {
-    MathFunction mathFunction(funcTxt, *new QPen(Qt::red));
+    MathFunction mathFunction(funcTxt, colorsRandom[functions.size()%colorsRandom.size()]);
     
     functions.push_back(mathFunction);
     
