@@ -22,6 +22,7 @@ class Range
 {
     
     
+    
 public:
     /* X-Y Range Params */
     

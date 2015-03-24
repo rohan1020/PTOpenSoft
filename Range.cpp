@@ -13,7 +13,7 @@
 Range::Range()
 {
     x_min = -3.14*2 ;
-    x_max = 3.14*9 ;
+    x_max = 3.14*2 ;
     
     y_min = -10 ;
     y_max = 10 ;
@@ -159,6 +159,69 @@ CanvasStateData Range::getGridCanvasData()
     lines.push_back(y_axis); // Y-Axis
     rects.push_back(* new QRect(0,0,width, height)); //Main Box
     
+    int RECT_WIDTH = 40, RECT_HEIGHT = 40, LINE_WIDTH = 10;
+    
+    vector<float> xticks ;
+    xticks.push_back(1);
+    xticks.push_back(2.5);
+    
+    for(int i=0; i<xticks.size(); i++)
+    {
+        float num = xticks[i];
+    
+        int rect_x = findQPoint(* new Point(num,0)).x() - (RECT_WIDTH/2);
+        
+        int rect_y = center.y();
+        
+        QRect axisRect(rect_x,rect_y,RECT_WIDTH,RECT_WIDTH);
+        
+        char msg[10];
+        
+        sprintf(msg, "%.4g", num );
+        CanvasText axisNum(msg, axisRect);
+        
+        QPoint axis_p1(findQPoint(* new Point(num,0)).x(), center.y() - LINE_WIDTH/2);
+        
+        QPoint axis_p2(findQPoint(* new Point(num,0)).x(), center.y() + LINE_WIDTH/2);
+        
+        Line axisLine(axis_p1,axis_p2);
+        
+        txts.push_back(axisNum);
+        lines.push_back(axisLine);
+    
+    }
+    
+    vector<float> yticks ;
+    yticks.push_back(1);
+    yticks.push_back(2);
+    
+    for(int i=0; i<yticks.size(); i++)
+    {
+        float num = yticks[i];
+        
+        int rect_y = findQPoint(* new Point(0,num)).y() - (RECT_HEIGHT/2);
+        
+        int rect_x = center.x();
+        
+        QRect axisRect(rect_x,rect_y,RECT_WIDTH,RECT_WIDTH);
+        
+        char msg[10];
+        
+        sprintf(msg, "%.4g", num );
+        CanvasText axisNum(msg, axisRect);
+        
+        QPoint axis_p1(center.x() - LINE_WIDTH/2,findQPoint(* new Point(0,num)).y());
+        
+        QPoint axis_p2(center.x() + LINE_WIDTH/2,findQPoint(* new Point(0,num)).y());
+        
+        Line axisLine(axis_p1,axis_p2);
+        
+        txts.push_back(axisNum);
+        lines.push_back(axisLine);
+        
+    }
+    
+    //rects.push_back(axisRect);
     
     CanvasStateData csd = *new CanvasStateData(rects, lines,txts);
     csd.width = width ;

@@ -34,7 +34,7 @@ void CanvasState::paintEvent(QPaintEvent *event)
     // Drawing Texts
     for(int i=0; i<canvasStateData.texts.size(); i++)
     {
-        painter.drawText(canvasStateData.texts[i].rect, canvasStateData.texts[i].txt.c_str());
+        painter.drawText(canvasStateData.texts[i].rect, Qt::AlignCenter, canvasStateData.texts[i].txt.c_str());
     }
     
         
