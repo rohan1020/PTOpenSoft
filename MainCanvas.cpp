@@ -13,8 +13,8 @@ MainCanvas::MainCanvas()
     MathFunction f, f2;
     f2.isSin = 0;
     
-    functions.push_back(f);
-    functions.push_back(f2);
+    //functions.push_back(f);
+    //functions.push_back(f2);
     
 }
 
@@ -95,3 +95,16 @@ void MainCanvas::zoom(int type)
     calculateCanvasData();
     canvas->setPrintData(totalData);
 }
+
+void MainCanvas::addFunction(string funcTxt)
+{
+    MathFunction mathFunction(funcTxt);
+    
+    functions.push_back(mathFunction);
+    
+    calculateCanvasData();
+    canvas->setPrintData(totalData);
+    
+}
+
+

@@ -6,6 +6,7 @@
 #include "CanvasState.h"
 #include "CanvasStateData.h"
 #include "MainCanvas.h"
+#include <string>
 
 class Window : public QWidget
 {
@@ -15,6 +16,8 @@ public:
     Window();
 
     void redrawCanvasData(CanvasStateData cdata);
+    
+    void addFunction(string funcTxt);
     
 private:
     CanvasState *gobject;

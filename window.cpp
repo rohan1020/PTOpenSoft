@@ -9,7 +9,15 @@
 Window::Window() : QWidget()
 {
     
+//    QDialog *dialog = new QDialog;
+//    dialog->setWindowTitle("Dialog");
+//    dialog->show();
     
+    
+    FunctionInputWindow *fiw = new FunctionInputWindow;
+    fiw->setWindowTitle("Input Function");
+    fiw->show();
+    fiw->window = this;
     
     canvasData = mainCanvas.calculateCanvasData();
     
@@ -57,9 +65,14 @@ void Window::redrawCanvasData(CanvasStateData cdata)
 {
     canvasData = cdata;
     gobject->setPrintData(canvasData);
+    
 }
 
-
+void Window::addFunction(string funcTxt)
+{
+    mainCanvas.addFunction(funcTxt);
+    
+}
 void Window::UpSlot()
 {
     mainCanvas.moveCoordinate(3);

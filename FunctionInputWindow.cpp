@@ -31,28 +31,37 @@ FunctionInputWindow::~FunctionInputWindow()
 void FunctionInputWindow::on_pushButton_clicked()             //Proceed Button
 {
     QString expression = ui->textEdit->toPlainText();
-    std::cout << "Proceedng with Expression : " << expression.toStdString() ;
-    //evaluate(expression);
+    evaluate(expression);
+    
+    
     
 }
 
 void FunctionInputWindow::on_pushButton_2_clicked()          //y=sin(x)
 {
     QString expression = "sin(x)";
-    //evaluate(expression);
+    evaluate(expression);
     
 }
 
 void FunctionInputWindow::on_pushButton_3_clicked()         //y=exp(x)
 {
     QString expression ="exp(x)";
-    //evaluate(expression);
+    evaluate(expression);
     
 }
 
 void FunctionInputWindow::on_pushButton_4_clicked()        //y=exp(cos(2*x))
 {
     QString expression = "exp(cos(2*x))";
-    //evaluate(expression);
+    evaluate(expression);
     
+}
+
+void FunctionInputWindow::evaluate(QString expression)
+{
+    std::cout << "Proceedng with Expression : " << expression.toStdString() << "\n" ;
+    window->addFunction(expression.toStdString());
+    
+    this->close();
 }

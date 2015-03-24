@@ -10,15 +10,20 @@
 #define __OpenSoftpt__MathFunction__
 
 #include <stdio.h>
+#include <string>
+
+using namespace std;
 
 class MathFunction {
     
+    string funcTxt;
     
 public:
     
     int isSin = 1 ; //TMP
     
     MathFunction();
+    MathFunction(string pfuncTxt);
     
     float getYVal(float x);
     

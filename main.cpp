@@ -17,9 +17,6 @@ int main(int argc, char *argv[])
     Window window;
     window.show();
     
-    FunctionInputWindow ff;
-    ff.show();
-    
     
     return app.exec();
 }

@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 #include <QMainWindow>
+#include "window.h"
 
 namespace Ui {
     class FunctionInputWindow;
@@ -24,6 +25,8 @@ class FunctionInputWindow : public QMainWindow
 public:
     explicit FunctionInputWindow(QWidget *parent = 0);
     ~FunctionInputWindow();
+    Window *window;
+    void evaluate(QString expression);
     
     private slots:
     void on_pushButton_clicked();
@@ -36,6 +39,7 @@ public:
     
 private:
     Ui::FunctionInputWindow *ui;
+    
 };
 
 #endif /* defined(___dpaint__FunctionInputWindow__) */

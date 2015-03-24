@@ -48,6 +48,8 @@ public:
     
     void zoom(int type);
     
+    void addFunction(string funcTxt);
+    
     
         
 };

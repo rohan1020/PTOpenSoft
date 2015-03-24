@@ -17,6 +17,13 @@ MathFunction::MathFunction()
     
 }
 
+
+MathFunction::MathFunction(string pfuncTxt): funcTxt(pfuncTxt)
+{
+    
+}
+
+
 float MathFunction::getYVal(float x)
 {
     if(isSin == 1)
