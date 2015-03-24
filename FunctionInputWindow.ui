@@ -30,7 +30,7 @@
 <x>0</x>
 <y>370</y>
 <width>501</width>
-<height>27</height>
+<height>57</height>
 </rect>
 </property>
 <property name="text">
@@ -73,6 +73,21 @@
 </rect>
 </property>
 <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+    <widget class="QLabel" name="label_4">
+        <property name="geometry">
+            <rect>
+                <x>120</x>
+                <y>40</y>
+                <width>261</width>
+                <height>17</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Examples:</string>
+        </property>
+    </widget>
+    </item>
 <item>
 <widget class="QPushButton" name="pushButton_2">
 <property name="text">
@@ -90,7 +105,7 @@
 <item>
 <widget class="QPushButton" name="pushButton_4">
 <property name="text">
-<string>y=cos(exp(2*x))</string>
+<string>y=x+cos(x)-sin(2*x)+cos(6*x+pi)</string>
 </property>
 </widget>
 </item>

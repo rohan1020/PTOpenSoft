@@ -22,9 +22,6 @@ MathFunction::MathFunction()
 
 MathFunction::MathFunction(string pfuncTxt, QPen pPen): funcTxt(pfuncTxt), qpen(pPen)
 {
-    Parser pars;
-    string result = pars.parse("x=2");
-    cout << result ;
 }
 
 

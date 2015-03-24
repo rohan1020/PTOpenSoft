@@ -52,7 +52,7 @@ public:
     
     void addFunction(string funcTxt);
     
-    
+    void removeFunction(int idx);
         
 };
 

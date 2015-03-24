@@ -114,3 +114,12 @@ void MainCanvas::addFunction(string funcTxt)
 }
 
 
+
+void MainCanvas::removeFunction(int idx)
+{
+    functions.erase(functions.begin() + idx);
+        
+    calculateCanvasData();
+    canvas->setPrintData(totalData);
+    
+}

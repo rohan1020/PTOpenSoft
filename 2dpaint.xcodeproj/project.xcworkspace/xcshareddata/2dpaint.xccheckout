@@ -22,7 +22,7 @@
 		<key>BD0A601068B70E341A6AF8A4D69BB08B72198FB4</key>
 		<string>../..</string>
 		<key>D0F7CC2A9B712D1BD694FB9E86CCB9D5F0658B74</key>
-		<string>../../expparser/</string>
+		<string>../../expparser</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/rohan1020/PTOpenSoft.git</string>

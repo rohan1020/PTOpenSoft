@@ -19,7 +19,10 @@ public:
     
     void addFunction(string funcTxt);
     
+    void addNewFunc(QString s);
+    
 private:
+    int numRows;
     CanvasState *gobject;
     CanvasStateData canvasData ;
     MainCanvas mainCanvas ;
@@ -33,6 +36,14 @@ private:
     QPushButton *zin_y;
     QPushButton *zout_y;
     
+    QListWidget *funcView;
+    QPushButton *newButton;
+    QPushButton *delButton;
+    QPushButton *screenButton;
+    QVector<QString> myList;
+    
+    QGridLayout *funcList;
+    
     private slots:
     void UpSlot();
     void DownSlot();
@@ -42,6 +53,13 @@ private:
     void ZoutSlot();
     void ZinSlot_y();
     void ZoutSlot_y();
+    void NewSlot();
+    void DeleteSlot();
+    void ScreenSlot();
+    
+    
+    
+    //void NewSlot();
    
 };
 

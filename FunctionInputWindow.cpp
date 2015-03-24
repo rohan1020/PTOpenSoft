@@ -53,15 +53,15 @@ void FunctionInputWindow::on_pushButton_3_clicked()         //y=exp(x)
 
 void FunctionInputWindow::on_pushButton_4_clicked()        //y=exp(cos(2*x))
 {
-    QString expression = "exp(cos(2*x))";
+    QString expression = "x+cos(x)-sin(2*x)+cos(6*x+pi)";
     evaluate(expression);
-    
+        // x + cos(x) - sin(2*x) + cos(6*x+ pi)
 }
 
 void FunctionInputWindow::evaluate(QString expression)
 {
-    std::cout << "Proceedng with Expression : " << expression.toStdString() << "\n" ;
+    //std::cout << "Proceedng with Expression : " << expression.toStdString() << "\n" ;
     window->addFunction(expression.toStdString());
-    
+    window->show();
     this->close();
 }

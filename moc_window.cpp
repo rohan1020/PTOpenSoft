@@ -22,7 +22,7 @@ static const uint qt_meta_data_Window[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -38,6 +38,9 @@ static const uint qt_meta_data_Window[] = {
       61,   16,   16,   16, 0x08,
       72,   16,   16,   16, 0x08,
       84,   16,   16,   16, 0x08,
+      97,   16,   16,   16, 0x08,
+     107,   16,   16,   16, 0x08,
+     120,   16,   16,   16, 0x08,
 
        0        // eod
 };
@@ -45,7 +48,8 @@ static const uint qt_meta_data_Window[] = {
 static const char qt_meta_stringdata_Window[] = {
     "Window\0UpSlot()\0\0DownSlot()\0LeftSlot()\0"
     "RightSlot()\0ZinSlot()\0ZoutSlot()\0"
-    "ZinSlot_y()\0ZoutSlot_y()\0"
+    "ZinSlot_y()\0ZoutSlot_y()\0NewSlot()\0"
+    "DeleteSlot()\0ScreenSlot()\0"
 };
 
 void Window::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -62,6 +66,9 @@ void Window::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 5: _t->ZoutSlot(); break;
         case 6: _t->ZinSlot_y(); break;
         case 7: _t->ZoutSlot_y(); break;
+        case 8: _t->NewSlot(); break;
+        case 9: _t->DeleteSlot(); break;
+        case 10: _t->ScreenSlot(); break;
         default: ;
         }
     }
@@ -100,9 +107,9 @@ int Window::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 11;
     }
     return _id;
 }

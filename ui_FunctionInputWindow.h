@@ -36,6 +36,7 @@ public:
     QLabel *label_3;
     QWidget *widget;
     QVBoxLayout *verticalLayout;
+    QLabel *label_4;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
@@ -55,7 +56,7 @@ public:
         textEdit->setGeometry(QRect(120, 60, 261, 41));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(0, 370, 501, 27));
+        pushButton->setGeometry(QRect(0, 370, 501, 57));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(80, 70, 67, 17));
@@ -70,6 +71,12 @@ public:
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
+        label_4 = new QLabel(widget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(120, 40, 261, 17));
+
+        verticalLayout->addWidget(label_4);
+
         pushButton_2 = new QPushButton(widget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
@@ -108,9 +115,10 @@ public:
         pushButton->setText(QApplication::translate("FunctionInputWindow", "Proceed", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("FunctionInputWindow", "      y=", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("FunctionInputWindow", "Enter Function:", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("FunctionInputWindow", "Examples:", 0, QApplication::UnicodeUTF8));
         pushButton_2->setText(QApplication::translate("FunctionInputWindow", "y=sin(x)", 0, QApplication::UnicodeUTF8));
         pushButton_3->setText(QApplication::translate("FunctionInputWindow", "y=exp(x)", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setText(QApplication::translate("FunctionInputWindow", "y=cos(exp(2*x))", 0, QApplication::UnicodeUTF8));
+        pushButton_4->setText(QApplication::translate("FunctionInputWindow", "y=x+cos(x)-sin(2*x)+cos(6*x+pi)", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
